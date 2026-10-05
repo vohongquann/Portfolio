@@ -2,141 +2,305 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vo Hong Quan</title>
-
-  <!-- Boxicons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Portfolio of Vo Hong Quan — AI Engineer specializing in Robotics, Machine Learning, and Deep Learning.">
-  <meta name="keywords" content="AI Engineer, Machine Learning, Deep Learning, Robotics, Portfolio, Vo Hong Quan">
+  <title>Vo Hong Quan — AI & Robotics Engineer</title>
+  <meta name="description" content="Portfolio of Vo Hong Quan, AI engineer working on reinforcement learning, control and robotics. Live in-browser demos of the projects.">
   <meta name="author" content="Vo Hong Quan">
+
+  <!-- Apply the saved / system theme before first paint -->
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem("theme"); } catch {}
+      theme ||= matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- Header -->
   <header class="header">
-    <a href="#" class="logo">Portfolio</a>
-    <nav class="navbar">
-      <a href="#home" class="active" style="--i:1">Home</a>
-      <a href="#about" style="--i:2">About</a>
-      <a href="#skills" style="--i:3">Skills</a>
-      <a href="#education" style="--i:4">Education</a>
-      <a href="#contact" style="--i:5">Contact</a>
-    </nav>
+    <div class="container header__inner">
+      <a href="#top" class="brand"><span class="brand__mark">VQ</span>Vo Hong Quan</a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="bx bx-moon icon-dark"></i><i class="bx bx-sun icon-light"></i>
+        </button>
+        <a href="CV_VoHongQuan.pdf" class="btn btn--sm btn--solid hide-sm" download>Resume</a>
+        <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- Home Section -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>Hello, I'm</h3>
-      <h1>Vo Hong Quan</h1>
-      <!-- <h3>I'm a <span class="multiple-text"></span></h3> -->
-      <p>
-        Final-year AI & Robotics Engineering student passionate about developing intelligent systems through deep learning and robotics.
-      </p>
-
-      <!-- Social Links -->
-      <div class="social-media">
-        <a href="https://github.com/vohongquann" target="_blank" rel="noopener noreferrer" style="--i:7">
-            <i class="bx bxl-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/vhq-hcmute" target="_blank" rel="noopener noreferrer" style="--i:8">
-            <i class="bx bxl-linkedin"></i>
-        </a>
-        <a href="https://www.kaggle.com/honggquan" target="_blank" rel="noopener noreferrer" style="--i:9">
-            <img src="https://cdn.simpleicons.org/kaggle/0ef" alt="Kaggle" width="24" height="24">
-        </a>
-      </div>
-
-      <a href="CV_VoHongQuan.pdf" class="btn" download>Download CV</a>
-    </div>
-
-    <div class="home-img">
-      <img src="home.png" alt="Portrait of Vo Hong Quan" loading="lazy">
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <h2 class="heading">About <span>Me</span></h2>
-    <div class="about-content">
-      <p>
-        I'm an AI Engineer and Robotics enthusiast passionate about combining deep learning, computer vision, and automation to build real-world intelligent systems.
-      </p>
-      <p>
-        My goal is to create AI-driven solutions that are not only functional but also ethical, scalable, and human-centered.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2 class="heading">My <span>Skills</span></h2>
-    <div class="skills-container">
-      <div class="skill-box">
-        <i class="bx bxs-brain"></i>
-        <h3>Machine Learning</h3>
-        <p>Scikit-learn, TensorFlow, PyTorch, data preprocessing, model training, and evaluation.</p>
-      </div>
-      <div class="skill-box">
-        <i class="bx bxs-microchip"></i>
-        <h3>Robotics</h3>
-        <p>ROS, embedded AI, microcontrollers (Arduino, Raspberry Pi), and robotic control systems.</p>
-      </div>
-      <div class="skill-box">
-        <i class="bx bxs-data"></i>
-        <h3>Computer Vision</h3>
-        <p>OpenCV, YOLO, and image processing for real-time detection and tracking tasks.</p>
-      </div>
-      <div class="skill-box">
-        <i class="bx bx-code-alt"></i>
-        <h3>Programming</h3>
-        <p>Python, C++, and JavaScript with strong foundation in algorithms and problem-solving.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section class="education" id="education">
-    <h2 class="heading">My <span>Education</span></h2>
-    <div class="education-container">
-      <div class="edu-box">
-        <i class="bx bxs-graduation"></i>
-        <h3>HCMC University of Technology and Education</h3>
-        <p>
-          Bachelor of Engineering in Artificial Intelligence and Robotics<br>
-          <span>8/2022 – Expected 8/2026</span>
+  <main id="top">
+    <!-- ========== Hero ========== -->
+    <section class="hero container">
+      <div class="hero__text">
+        <p class="pill"><span class="pill__dot"></span>Open to AI / Robotics engineer roles</p>
+        <h1>Vo Hong Quan</h1>
+        <p class="hero__role">AI &amp; Robotics Engineer</p>
+        <p class="hero__lead">
+          Final-year Robotics &amp; AI student at HCMUTE. I train reinforcement learning controllers in simulation
+          and deploy them on real hardware: from a rotary inverted pendulum on an ESP32 to a Crazyflie flight stack
+          in Isaac Lab.
         </p>
-      </div>
-      <div class="edu-box">
-        <i class="bx bxs-certification"></i>
-        <h3>Certifications</h3>
-        <ul>
-          <li>TOEIC 715/990 — IIG Vietnam (2025)</li>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--solid"><i class="bx bx-play-circle"></i> Try the live demos</a>
+          <a href="CV_VoHongQuan.pdf" class="btn btn--outline" download><i class="bx bx-download"></i> Download CV</a>
+        </div>
+        <ul class="socials">
+          <li><a href="https://github.com/vohongquann" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vhq-hcmute" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a></li>
+          <li><a href="https://www.kaggle.com/honggquan" target="_blank" rel="noopener" aria-label="Kaggle"><span class="kaggle">k</span></a></li>
+          <li><a href="mailto:vohongquan.6524@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a></li>
         </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
+      <figure class="portrait">
+        <img src="assets/img/avatar.png" alt="Portrait of Vo Hong Quan" width="408" height="612">
+        <figcaption>
+          <span>HCMUTE · Robotics &amp; AI</span>
+          <span>Class of 2026</span>
+        </figcaption>
+      </figure>
+    </section>
 
-    <div class="contact-info">
-      <p><i class="bx bx-envelope"></i> vohongquan.6524@gmail.com</p>
-      <p><i class="bx bx-phone"></i> +84 363645485</p>
-      <p><i class="bx bx-map"></i> Ho Chi Minh City, Vietnam</p>
-    </div>
-  </section>
+    <!-- ========== Work ========== -->
+    <section class="section container" id="work">
+      <header class="section__head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects you can run right here</h2>
+        <p class="section__lead">Each demo runs in your browser, built from the code and parameters of the project repository.</p>
+      </header>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="script.js"></script>
+      <!-- Rotary pendulum -->
+      <article class="showcase reveal">
+        <div class="showcase__info">
+          <p class="meta"><span>01</span> 02/2025 – 06/2025</p>
+          <h3>RL Rotary Inverted Pendulum</h3>
+          <p>
+            Two Soft Actor-Critic agents trained on a Simscape model of the QUBE-Servo 2: one swings the pendulum up
+            in about two seconds, the other keeps it balanced. The final policy runs on an ESP32 in real time.
+          </p>
+          <ul class="points">
+            <li>The demo runs the exported actor networks of both agents (6 → 8 → 8 → 1 and 6 → 32 → 32 → 32 → 1).</li>
+            <li>Press <em>Push</em> to disturb it while it balances. If it falls, it resets and swings up again.</li>
+          </ul>
+          <ul class="tags"><li>MATLAB</li><li>Simulink</li><li>SAC</li><li>ESP32</li><li>C++</li></ul>
+          <div class="links">
+            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/rotary-pendulum-matlab" target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
+          </div>
+        </div>
+
+        <div class="demo" data-demo="pendulum">
+          <div class="demo__tabs" role="tablist">
+            <button role="tab" aria-selected="true" data-tab="live">Live demo</button>
+            <button role="tab" aria-selected="false" data-tab="video">Hardware video</button>
+          </div>
+          <div class="demo__view" data-panel="live">
+            <canvas aria-label="Simulated rotary inverted pendulum controlled by the trained agents"></canvas>
+          </div>
+          <div class="demo__view" data-panel="video" hidden>
+            <video src="assets/videos/rotary-pendulum.mp4" controls muted playsinline preload="metadata"></video>
+          </div>
+          <div class="demo__bar">
+            <button class="chip-btn" data-action="push"><i class="bx bx-hand"></i> Push</button>
+            <button class="chip-btn" data-action="restart"><i class="bx bx-reset"></i> Restart</button>
+            <button class="chip-btn" data-action="slow" aria-pressed="false"><i class="bx bx-time-five"></i> Slow-mo</button>
+          </div>
+          <p class="demo__note">Plant model rebuilt from the repo's motor and CAD parameters; actor weights from <code>get_action_su.m</code> / <code>get_action_b.m</code>.</p>
+        </div>
+      </article>
+
+      <!-- Drone -->
+      <article class="showcase reveal">
+        <div class="showcase__info">
+          <p class="meta"><span>02</span> 2025 – Present</p>
+          <h3>Drone RL: Crazyflie in Isaac Lab</h3>
+          <p>
+            Flight control for the Crazyflie 2.1 Brushless in Isaac Lab 3.0: a cascaded PID baseline and the same four
+            layers learned with PPO, small enough for the on-board STM32, plus landing on an ArUco marker.
+          </p>
+          <ul class="points">
+            <li>The demo flies a side-view model with the repo's tuned PID gains: position → velocity → attitude → rate.</li>
+            <li>Tap anywhere to set a target, or pick a route. <em>Gust</em> hits it with a sideways push.</li>
+          </ul>
+          <ul class="tags"><li>Isaac Lab</li><li>PPO</li><li>rsl_rl</li><li>PID</li><li>Python</li></ul>
+          <div class="links">
+            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/Drone_RL" target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
+          </div>
+        </div>
+
+        <div class="demo" data-demo="drone">
+          <div class="demo__view">
+            <canvas class="clickable" aria-label="Side view of a quadrotor following targets with a cascaded PID controller"></canvas>
+          </div>
+          <div class="demo__bar">
+            <button class="chip-btn" data-route="square" aria-pressed="true"><i class="bx bx-square"></i> Square</button>
+            <button class="chip-btn" data-route="eight" aria-pressed="false"><i class="bx bx-infinite"></i> Figure-8</button>
+            <button class="chip-btn" data-action="gust"><i class="bx bx-wind"></i> Gust</button>
+          </div>
+          <p class="demo__note">2-D simplification (34 g, 0.2 N per motor, 30 ms motor lag); drone drawn 2.5× size.</p>
+        </div>
+      </article>
+
+      <!-- NeuroKit -->
+      <article class="showcase reveal">
+        <div class="showcase__info">
+          <p class="meta"><span>03</span> 09/2024 – 10/2024</p>
+          <h3>NeuroKit: Deep Learning from Scratch</h3>
+          <p>
+            A PyTorch-like framework written with NumPy only: tensors with autograd, layers, losses, and SGD / Adam /
+            RMSprop optimizers, plus synthetic datasets to test them.
+          </p>
+          <ul class="points">
+            <li>The demo is a JavaScript port of the same building blocks, training live on NeuroKit's own datasets.</li>
+            <li>Change the dataset, activation or optimizer and watch the decision boundary form.</li>
+          </ul>
+          <ul class="tags"><li>NumPy</li><li>Autograd</li><li>Python</li></ul>
+          <div class="links">
+            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/NeuroKit" target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
+          </div>
+        </div>
+
+        <div class="demo" data-demo="neurokit">
+          <div class="demo__view">
+            <canvas aria-label="Neural network decision boundary training live"></canvas>
+          </div>
+          <div class="demo__bar">
+            <label class="select"><span>Data</span>
+              <select data-opt="dataset"><option>Spiral</option><option>Circle</option><option>Zone</option></select>
+            </label>
+            <label class="select"><span>Act</span>
+              <select data-opt="activation"><option>ReLU</option><option>Tanh</option></select>
+            </label>
+            <label class="select"><span>Optim</span>
+              <select data-opt="optimizer"><option>Adam</option><option>SGD</option><option>RMSprop</option></select>
+            </label>
+            <button class="chip-btn" data-action="play" aria-pressed="false"><i class="bx bx-pause"></i> Pause</button>
+            <button class="chip-btn" data-action="reset"><i class="bx bx-reset"></i> Reset</button>
+          </div>
+          <p class="demo__note">MLP 2 → 24 → 24 → 3, full-batch training on 200–300 points.</p>
+        </div>
+      </article>
+
+      <!-- Other projects -->
+      <h3 class="subhead reveal">More projects</h3>
+      <div class="cards">
+        <a class="card reveal" href="https://github.com/vohongquann/agri-crop-classification" target="_blank" rel="noopener">
+          <div class="card__top"><i class="bx bx-leaf"></i><i class="bx bx-link-external"></i></div>
+          <h4>Agricultural Crop Classification</h4>
+          <p>Image classification pipeline: EDA, stratified splits, augmentation, VGG16 training and per-class evaluation.</p>
+          <ul class="tags"><li>PyTorch</li><li>CNN</li><li>VGG16</li></ul>
+        </a>
+        <a class="card reveal" href="https://github.com/vohongquann/regression_comparison" target="_blank" rel="noopener">
+          <div class="card__top"><i class="bx bx-line-chart"></i><i class="bx bx-link-external"></i></div>
+          <h4>Regression Models Comparison</h4>
+          <p>Linear, Ridge, Lasso and ElasticNet, closed-form vs. gradient descent, on Kaggle House Prices (best RMSE 0.134).</p>
+          <ul class="tags"><li>scikit-learn</li><li>Keras</li><li>Kaggle</li></ul>
+        </a>
+        <a class="card card--ghost reveal" href="https://github.com/vohongquann?tab=repositories" target="_blank" rel="noopener">
+          <div class="card__top"><i class="bx bxl-github"></i><i class="bx bx-right-arrow-alt"></i></div>
+          <h4>All repositories</h4>
+          <p>Everything else I'm building, on GitHub.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== Experience ========== -->
+    <section class="section container" id="experience">
+      <header class="section__head reveal">
+        <p class="eyebrow">Background</p>
+        <h2>Experience &amp; education</h2>
+      </header>
+
+      <div class="timeline">
+        <article class="timeline__item reveal">
+          <p class="meta">02/2025 – Present</p>
+          <div>
+            <h3>Research Assistant</h3>
+            <p class="timeline__org">Robotics Lab, HCMUTE</p>
+            <ul class="points">
+              <li>Train reinforcement learning models and test them in real time on control systems.</li>
+              <li>Design reward functions and tune hyperparameters for RL agents.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline__item reveal">
+          <p class="meta">08/2022 – 08/2026</p>
+          <div>
+            <h3>B.Eng. Robotics &amp; Artificial Intelligence</h3>
+            <p class="timeline__org">HCMC University of Technology and Education</p>
+            <ul class="points">
+              <li>Coursework: Machine Vision, Artificial Intelligence, Artificial Neural Networks.</li>
+              <li>TOEIC 715 / 990, IIG Vietnam (2025).</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== Skills ========== -->
+    <section class="section container" id="skills">
+      <header class="section__head reveal">
+        <p class="eyebrow">Toolbox</p>
+        <h2>Skills</h2>
+      </header>
+
+      <dl class="skills reveal">
+        <div><dt>Languages</dt><dd><ul class="tags"><li>Python</li><li>C / C++</li><li>MATLAB</li></ul></dd></div>
+        <div><dt>Machine learning</dt><dd><ul class="tags"><li>Reinforcement learning</li><li>Deep learning</li><li>Supervised</li><li>Unsupervised</li></ul></dd></div>
+        <div><dt>Frameworks</dt><dd><ul class="tags"><li>PyTorch</li><li>TensorFlow / Keras</li><li>scikit-learn</li><li>OpenCV</li><li>YOLO</li></ul></dd></div>
+        <div><dt>Robotics &amp; sim</dt><dd><ul class="tags"><li>Isaac Lab / Isaac Sim</li><li>Simulink / Simscape</li><li>ESP32</li><li>STM32</li></ul></dd></div>
+        <div><dt>Tools</dt><dd><ul class="tags"><li>Git</li><li>Linux</li><li>Anaconda</li><li>Jupyter / Colab</li></ul></dd></div>
+      </dl>
+    </section>
+
+    <!-- ========== Contact ========== -->
+    <section class="section container" id="contact">
+      <div class="contact reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something that moves.</h2>
+        <p>I'm looking for AI and robotics engineering roles. The fastest way to reach me is email.</p>
+        <div class="contact__actions">
+          <a href="mailto:vohongquan.6524@gmail.com" class="btn btn--solid"><i class="bx bx-envelope"></i> vohongquan.6524@gmail.com</a>
+          <button class="btn btn--outline" id="copy-email" data-email="vohongquan.6524@gmail.com"><i class="bx bx-copy"></i> <span>Copy</span></button>
+        </div>
+        <ul class="contact__info">
+          <li><i class="bx bx-phone"></i> +84 363 645 485</li>
+          <li><i class="bx bx-map"></i> Ho Chi Minh City, Vietnam</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> Vo Hong Quan</p>
+    <a href="#top">Back to top <i class="bx bx-up-arrow-alt"></i></a>
+  </footer>
+
+  <script src="js/demos/stage.js" defer></script>
+  <script src="assets/data/pendulum-policy.js" defer></script>
+  <script src="js/demos/pendulum-model.js" defer></script>
+  <script src="js/demos/pendulum.js" defer></script>
+  <script src="js/demos/drone.js" defer></script>
+  <script src="js/demos/neurokit.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
