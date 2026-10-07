@@ -2,10 +2,10 @@
 
 | File | What it is |
 |---|---|
-| [CV_VoHongQuan.pdf](CV_VoHongQuan.pdf) | One-page resume, the file the website links to |
-| [Portfolio-VoHongQuan.pdf](Portfolio-VoHongQuan.pdf) | 8-page technical portfolio with three case studies |
+| [CV-VoHongQuan.pdf](CV-VoHongQuan.pdf) | One-page resume, the file the website links to |
+| [Portfolio-VoHongQuan.pdf](Portfolio-VoHongQuan.pdf) | 5-page technical portfolio with three case studies |
 | [word/](word/) | Editable Word versions: `CV_VoHongQuan.docx`, `Template-A.docx` and `Template-B.docx` (MIT CAPD layouts A and B), `Portfolio-VoHongQuan.docx` |
-| [latex/](latex/) | The same resume in five LaTeX layouts, all reading one [content.tex](latex/content.tex) |
+| [latex/](latex/) | Five resume layouts plus the portfolio; shared project facts live in [project-data.tex](latex/project-data.tex) |
 | [MIT_GUIDE.md](MIT_GUIDE.md) | MIT CAPD advice these documents follow, and what is still to do |
 
 ## LaTeX layouts
@@ -22,6 +22,8 @@
 cd latex
 make            # every template -> pdf/<name>.pdf (1 page) and pdf/<name>-cv.pdf (long: extra project bullets)
 make jake       # one template
+make cv         # canonical CV -> ../CV-VoHongQuan.pdf and ../word/CV-VoHongQuan.pdf
+make portfolio  # canonical portfolio -> ../Portfolio-VoHongQuan.pdf
 make clean
 ```
 

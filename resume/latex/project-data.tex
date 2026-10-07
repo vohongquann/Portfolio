@@ -1,0 +1,29 @@
+% Single source of truth for project facts shared by the CV and portfolio.
+% Keep portfolio-only architecture, images and limitations in portfolio.tex.
+
+\newcommand{\crazyTitle}{Crazyflie-IsaacLab: RL-Tuned PID Gains for a Crazyflie Quadrotor}
+\newcommand{\crazyTech}{Python, PyTorch, PPO (rsl\_rl), NVIDIA Isaac Lab}
+\newcommand{\crazyUrl}{https://github.com/vohongquann/Crazyflie-IsaacLab}
+\newcommand{\crazyLinkText}{github.com/vohongquann/Crazyflie-IsaacLab}
+\newcommand{\crazyDate}{Jan 2026 -- Sep 2026}
+\newcommand{\crazyBulletOne}{Built a four-layer flight controller (50--500 Hz) and physics-based Crazyflie model in Isaac Lab 3.0.}
+\newcommand{\crazyBulletTwo}{Trained one PPO MLP per layer to tune 9 PID gains, reducing tracking error 23--62\% versus PID (attitude: 15.5\textdegree{} to 5.9\textdegree{}).}
+\newcommand{\crazyBulletThree}{Anchored zero network output to the stable PID baseline and sized each MLP for STM32 deployment.}
+
+\newcommand{\balanceTitle}{BalancingRobot-IsaacLab: Self-Balancing Robot with an RL Cascade}
+\newcommand{\balanceTech}{Python, PPO (rsl\_rl), ROS 2, ONNX, LQR, PID}
+\newcommand{\balanceUrl}{https://github.com/vohongquann/BalancingRobot-IsaacLab}
+\newcommand{\balanceLinkText}{github.com/vohongquann/BalancingRobot-IsaacLab}
+\newcommand{\balanceDate}{Jun 2025 -- Dec 2025}
+\newcommand{\balanceBulletOne}{Trained a PPO velocity policy that maps commands and raw IMU/encoder data to wheel torques.}
+\newcommand{\balanceBulletTwo}{Added a frozen position policy; recorded zero falls in 768 randomized episodes and 8 mm median goal error.}
+\newcommand{\balanceBulletThree}{Beat LQR on speed steps: 0.026 m/s error in 0.36 s versus 0.067 m/s in 1.1 s.}
+
+\newcommand{\rotaryTitle}{RotaryPendulum-IsaacLab: Learned Cascade PID for a Rotary Inverted Pendulum}
+\newcommand{\rotaryTech}{Python, PPO (rsl\_rl), NVIDIA Isaac Lab, PhysX, URDF}
+\newcommand{\rotaryUrl}{https://github.com/vohongquann/RotaryPendulum-IsaacLab}
+\newcommand{\rotaryLinkText}{github.com/vohongquann/RotaryPendulum-IsaacLab}
+\newcommand{\rotaryDate}{Feb 2025 -- May 2025}
+\newcommand{\rotaryBulletOne}{Modeled the QUBE-Servo 2 from CAD with a DC motor and quantized encoders at 500 Hz.}
+\newcommand{\rotaryBulletTwo}{Trained a PPO policy on 4,096 robots in 64 minutes to tune six cascade-PID gains at 100 Hz.}
+\newcommand{\rotaryBulletThree}{Validated on 256 randomized robots: 0.40 s swing-up, 0.23--0.50 s settling and at most 1.4\textdegree{} median overshoot.}

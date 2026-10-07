@@ -2,16 +2,19 @@
 % Low-level macros (\EduItem, \ExpEntry, \ProjEntry, \SkillItem, \CertItem, cvbullets) are defined by each template.
 % Build the long version (extra project bullets) with:  \def\LONG{1}  before \input{content}.
 
+\input{project-data}
+
 \newcommand{\cvName}{Vo Hong Quan}
 \newcommand{\cvFirst}{Vo}
 \newcommand{\cvLast}{Hong Quan}
 \newcommand{\cvLocation}{Ho Chi Minh City, Vietnam}
 \newcommand{\cvPhone}{(+84) 363 645 485}
+\newcommand{\cvPhoneUrl}{tel:+84363645485}
 \newcommand{\cvEmail}{vohongquan.6524@gmail.com}
 \newcommand{\cvGithubUrl}{https://github.com/vohongquann}
 \newcommand{\cvGithub}{github.com/vohongquann}
-\newcommand{\cvLinkedinUrl}{https://www.linkedin.com/in/vhq-hcmute}
-\newcommand{\cvLinkedin}{linkedin.com/in/vhq-hcmute}
+\newcommand{\cvPortfolioUrl}{https://vohongquann.github.io/Portfolio}
+\newcommand{\cvPortfolio}{vohongquann.github.io/Portfolio}
 
 \newcommand{\cvEducation}{%
   \EduItem{Ho Chi Minh City University of Technology and Engineering}{Ho Chi Minh City, Vietnam}{Bachelor of Robotics and Artificial Intelligence}{Expected Dec 2026}{Machine Vision, Artificial Intelligence, Artificial Neural Networks, Practice of Artificial Intelligence}{GPA: 3.22/4.0}%
@@ -20,39 +23,39 @@
 \newcommand{\cvExperience}{%
   \ExpEntry{Robotics Lab, Ho Chi Minh City University of Technology and Engineering}{Ho Chi Minh City, Vietnam}{Research Assistant}{Feb 2025 -- Present}{%
     \begin{cvbullets}
-      \item Support reinforcement learning training and real-time testing of robot control systems.
-      \item Assist in designing reward functions and tuning hyperparameters for reinforcement learning agents.
+      \item Train and evaluate reinforcement learning controllers for real-time robotic systems.
+      \item Design reward functions and tune hyperparameters for stable policies.
     \end{cvbullets}}%
 }
 
 \newcommand{\cvProjects}{%
-  \ProjEntry{Crazyflie-IsaacLab: RL-Tuned PID Gains for a Crazyflie Quadrotor}{Python, PyTorch, PPO (rsl\_rl), NVIDIA Isaac Lab}{\href{https://github.com/vohongquann/Crazyflie-IsaacLab}{github.com/vohongquann/Crazyflie-IsaacLab}}{Jan 2026 -- Sep 2026}{%
+  \ProjEntry{\crazyTitle}{\crazyTech}{\href{\crazyUrl}{\crazyLinkText}}{\crazyDate}{%
     \begin{cvbullets}
-      \item Built a four-layer cascaded flight controller (position 50 Hz, velocity 100 Hz, attitude 250 Hz, rate 500 Hz) for a Crazyflie 2.1 Brushless in Isaac Lab 3.0, with physical constants traced to the datasheet, system-identification papers and Bitcraze firmware.
-      \item Trained one small MLP per layer with PPO, bottom-up and then frozen, to output the 9 PID gains of its layer at every step; cut tracking error by 23--62\% against the hand-tuned PID on all four layers (attitude 15.5\textdegree{} to 5.9\textdegree{}).
-      \item Designed the gain network so that zero output equals the tuned PID, so training starts from a stable controller and converges in a few hundred PPO iterations; kept the networks small enough for the drone's STM32 microcontroller.
+      \item \crazyBulletOne
+      \item \crazyBulletTwo
+      \item \crazyBulletThree
       \ifdefined\LONG
-      \item Measured the cost of the gains: motor command chatter is 2.6--6.3$\times$ the PID's on the outer layers, documented as the next improvement.
-      \item Wrote a simulator-free pytest suite and scripts that regenerate every step-response figure and metric in the report.
+      \item Measured 2.6--6.3$\times$ more outer-loop motor chatter and documented it as the next improvement.
+      \item Wrote simulator-free tests and reproducible reporting scripts.
       \fi
     \end{cvbullets}}%
-  \ProjEntry{BalancingRobot-IsaacLab: Self-Balancing Robot with an RL Cascade}{Python, PPO (rsl\_rl), ROS 2, ONNX, LQR, PID}{\href{https://github.com/vohongquann/BalancingRobot-IsaacLab}{github.com/vohongquann/BalancingRobot-IsaacLab}}{Jun 2025 -- Dec 2025}{%
+  \ProjEntry{\balanceTitle}{\balanceTech}{\href{\balanceUrl}{\balanceLinkText}}{\balanceDate}{%
     \begin{cvbullets}
-      \item Trained a velocity policy with PPO that turns a forward-speed and turn-rate command into wheel torques for a Pololu Balboa 32U4, working only from a raw IMU (complementary filter) and the wheel encoders, as the real robot would.
-      \item Froze it and trained a position policy on top that drives to a goal pose; on 768 randomized episodes (pushes, IMU noise, randomized mass, friction and centre of mass) neither fell, with median errors of 8 mm (position) and 0.021 m/s (velocity).
-      \item Benchmarked against LQR and PID on the same tests: speed-step error 0.026 m/s settled in 0.36 s, versus 0.067 m/s and 1.1 s for LQR; goals reached within 2--6 mm, versus 13--50 mm for LQR.
+      \item \balanceBulletOne
+      \item \balanceBulletTwo
+      \item \balanceBulletThree
       \ifdefined\LONG
-      \item Trained policies that tune PID gains instead of writing torques; the gain-tuned go-to-goal PID followed a figure 8 with a 0.043 m median distance, the best of the four controllers.
-      \item Deployed the same networks (ONNX) in a ROS 2 node that reads the raw IMU and joint states and publishes wheel torques.
+      \item Achieved 0.043 m median figure-eight error with an RL-tuned PID, best among four controllers.
+      \item Deployed ONNX policies in a ROS 2 bridge from sensors to wheel torque.
       \fi
     \end{cvbullets}}%
-  \ProjEntry{RotaryPendulum-IsaacLab: Learned Cascade PID for a Rotary Inverted Pendulum}{Python, PPO (rsl\_rl), NVIDIA Isaac Lab, PhysX, URDF}{\href{https://github.com/vohongquann/RotaryPendulum-IsaacLab}{github.com/vohongquann/RotaryPendulum-IsaacLab}}{Feb 2025 -- May 2025}{%
+  \ProjEntry{\rotaryTitle}{\rotaryTech}{\href{\rotaryUrl}{\rotaryLinkText}}{\rotaryDate}{%
     \begin{cvbullets}
-      \item Modeled the QUBE-Servo 2 in Isaac Lab: URDF generated from CAD, a DC-motor model (PWM, current, back-EMF, torque) and quantized encoders with filtered velocity, simulated at 500 Hz.
-      \item Trained a PPO policy (4,096 parallel robots, 1,500 iterations, 64 minutes on one RTX 3060) that outputs the six gains of a two-loop cascade PID at 100 Hz from 12 observations.
-      \item Validated on 256 simulated robots, each with its own motor constants: swing-up in 0.40 s (median), arm steps settled in 0.23--0.50 s with at most 1.4\textdegree{} median overshoot (3 of 256 episodes ended early).
+      \item \rotaryBulletOne
+      \item \rotaryBulletTwo
+      \item \rotaryBulletThree
       \ifdefined\LONG
-      \item Published the trained weights, a 1080p demo video and the evaluation scripts so a fresh clone plays and re-evaluates in one command.
+      \item Published weights, a 1080p demo and one-command evaluation scripts.
       \fi
     \end{cvbullets}}%
 }
