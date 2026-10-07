@@ -1,0 +1,40 @@
+%-------------------------------------------------------------------------
+% moderncv "classic" style: coloured section titles and a left date column.
+% Good for reading on screen; the date column is a table-like layout, so for
+% applicant tracking systems prefer jake.tex / mit-a.tex / mit-b.tex.
+%-------------------------------------------------------------------------
+\documentclass[10pt,letterpaper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage[scale=0.97,top=0.6cm,bottom=0.6cm]{geometry}
+\setlength{\hintscolumnwidth}{2.2cm}
+\setlength{\parskip}{0pt}
+\renewcommand{\listitemsymbol}{\textbullet}
+
+\input{content}
+
+\newenvironment{cvbullets}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\topsep}{1pt}\setlength{\parsep}{0pt}}{\end{itemize}}
+\newcommand{\EduItem}[6]{\cventry{#4}{#3}{#1}{#2}{#6}{Relevant coursework: #5}}
+\newcommand{\ExpEntry}[5]{\cventry{#4}{#3}{#1}{#2}{}{#5}}
+\newcommand{\ProjEntry}[5]{\cventry{#4}{#1}{\small #2}{#3}{}{#5}}
+\newcommand{\SkillItem}[2]{\cvitem{#1}{#2}}
+\newcommand{\CertItem}[2]{\cvitem{#2}{#1}}
+
+\name{\cvFirst}{\cvLast}
+\address{\cvLocation}{}{}
+\phone[mobile]{\cvPhone}
+\email{\cvEmail}
+\social[github]{\cvGithub}
+\social[linkedin]{vhq-hcmute}
+
+\begin{document}
+\makecvtitle
+
+\section{Education}      \cvEducation
+\section{Experience}     \cvExperience
+\section{Projects}       \cvProjects
+\section{Skills}         \cvSkills
+\section{Certifications} \cvCerts
+
+\end{document}

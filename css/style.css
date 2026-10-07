@@ -596,6 +596,15 @@ code {
   background: #000;
 }
 
+.orbit {
+  cursor: grab;
+  touch-action: pan-y; /* touch drags yaw the 3D view; vertical swipes still scroll the page */
+}
+
+.orbit:active {
+  cursor: grabbing;
+}
+
 .clickable {
   cursor: crosshair;
   touch-action: manipulation;
@@ -613,8 +622,7 @@ code {
   display: none;
 }
 
-.chip-btn,
-.select {
+.chip-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -633,8 +641,7 @@ code {
   font-size: 1.05rem;
 }
 
-.chip-btn:hover,
-.select:hover {
+.chip-btn:hover {
   border-color: var(--text);
 }
 
@@ -642,25 +649,6 @@ code {
   border-color: var(--accent);
   background: var(--accent-soft);
   color: var(--accent);
-}
-
-.select span {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-}
-
-.select select {
-  border: 0;
-  background: none;
-  font-weight: 600;
-  cursor: pointer;
-  outline: none;
-}
-
-.select select option {
-  background: var(--surface);
-  color: var(--text);
 }
 
 .demo__note {
@@ -716,6 +704,15 @@ code {
 
 .card h4 {
   font-size: 1.05rem;
+}
+
+.card h4 .muted {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 400;
 }
 
 .card p {

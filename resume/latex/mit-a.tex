@@ -1,0 +1,58 @@
+%-------------------------------------------------------------------------
+% Follows MIT CAPD "Template A" (Times, centered header, ruled section titles).
+% Sections: Education, Experience, Projects, Skills, Certifications.
+%-------------------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[margin=0.7in]{geometry}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{-0.35em}\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+
+\newenvironment{cvbullets}{\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=1pt,parsep=0pt]}{\end{itemize}}
+
+\newcommand{\EduItem}[6]{%
+  \textbf{#1}, #2 \hfill #4\\
+  #3 \hfill #6\\
+  Relevant coursework: #5\par\vspace{3pt}}
+
+\newcommand{\ExpEntry}[5]{%
+  \textbf{#1} \hfill #4\\
+  \textit{#3} \hfill #2\par #5}
+
+\newcommand{\ProjEntry}[5]{%
+  \textbf{#1} \hfill #4\\
+  \textit{#2} \hfill #3\par #5}
+
+\newcommand{\SkillItem}[2]{\textbf{#1:} #2\par}
+\newcommand{\CertItem}[2]{#1 \hfill #2\par}
+
+\input{content}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries \cvName}\\[2pt]
+  \cvLocation\ $|$ \cvPhone\ $|$ \href{mailto:\cvEmail}{\cvEmail}\\
+  \href{\cvGithubUrl}{\cvGithub}\ $|$ \href{\cvLinkedinUrl}{\cvLinkedin}
+\end{center}
+
+\section{Education}      \cvEducation
+\section{Experience}     \cvExperience
+\section{Projects}       \cvProjects
+\section{Skills}         \cvSkills
+\section{Certifications} \cvCerts
+
+\end{document}

@@ -59,7 +59,8 @@ document.querySelectorAll(".demo__tabs").forEach((tabs) => {
 });
 
 /* ===== Live demos ===== */
-document.querySelectorAll("[data-demo]").forEach((el) => Demos[el.dataset.demo](el));
+// LIVE DEMO OFF: the demo scripts are commented out in index.html
+// document.querySelectorAll("[data-demo]").forEach((el) => Demos[el.dataset.demo](el));
 
 /* ===== Misc ===== */
 const copyBtn = document.getElementById("copy-email");

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vo Hong Quan — AI & Robotics Engineer</title>
-  <meta name="description" content="Portfolio of Vo Hong Quan, AI engineer working on reinforcement learning, control and robotics. Live in-browser demos of the projects.">
+  <meta name="description"
+    content="Portfolio of Vo Hong Quan, AI engineer working on reinforcement learning, control and robotics. Videos of the projects in Isaac Sim.">
+  <!-- LIVE DEMO OFF: description ended with "Live in-browser demos of the projects." -->
   <meta name="author" content="Vo Hong Quan">
 
   <!-- Apply the saved / system theme before first paint -->
   <script>
     (() => {
       let theme;
-      try { theme = localStorage.getItem("theme"); } catch {}
+      try { theme = localStorage.getItem("theme"); } catch { }
       theme ||= matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.dataset.theme = theme;
     })();
@@ -19,7 +22,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,7 +32,7 @@
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="#top" class="brand"><span class="brand__mark">VQ</span>Vo Hong Quan</a>
+      <a href="#top" class="brand"><span class="brand__mark">HQ</span>Vo Hong Quan</a>
 
       <nav class="nav" id="nav" aria-label="Main">
         <a href="#work">Work</a>
@@ -40,7 +45,7 @@
         <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
           <i class="bx bx-moon icon-dark"></i><i class="bx bx-sun icon-light"></i>
         </button>
-        <a href="CV_VoHongQuan.pdf" class="btn btn--sm btn--solid hide-sm" download>Resume</a>
+        <a href="resume/CV_VoHongQuan.pdf" class="btn btn--sm btn--solid hide-sm" download>Resume</a>
         <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
           <i class="bx bx-menu"></i>
         </button>
@@ -52,22 +57,28 @@
     <!-- ========== Hero ========== -->
     <section class="hero container">
       <div class="hero__text">
-        <p class="pill"><span class="pill__dot"></span>Open to AI / Robotics engineer roles</p>
+        <p class="pill"><span class="pill__dot"></span>Open to AI / Robotics engineering internships</p>
         <h1>Vo Hong Quan</h1>
         <p class="hero__role">AI &amp; Robotics Engineer</p>
         <p class="hero__lead">
-          Final-year Robotics &amp; AI student at HCMUTE. I train reinforcement learning controllers in simulation
-          and deploy them on real hardware: from a rotary inverted pendulum on an ESP32 to a Crazyflie flight stack
-          in Isaac Lab.
+          I am a Robotics and AI Engineering student at HCMUTE, with a strong interest in
+          autonomous systems, embedded control, and reinforcement learning.
+          My work focuses on bridging control theory, machine learning, deep learning and
+          real-time embedded systems to build intelligent robotic platforms.
         </p>
         <div class="hero__actions">
-          <a href="#work" class="btn btn--solid"><i class="bx bx-play-circle"></i> Try the live demos</a>
-          <a href="CV_VoHongQuan.pdf" class="btn btn--outline" download><i class="bx bx-download"></i> Download CV</a>
+          <!-- LIVE DEMO OFF <a href="#work" class="btn btn--solid"><i class="bx bx-play-circle"></i> Try the live demos</a> -->
+          <a href="#work" class="btn btn--solid"><i class="bx bx-play-circle"></i> See the projects</a>
+          <a href="resume/CV_VoHongQuan.pdf" class="btn btn--outline" download><i class="bx bx-download"></i> Download
+            CV</a>
         </div>
         <ul class="socials">
-          <li><a href="https://github.com/vohongquann" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/vhq-hcmute" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a></li>
-          <li><a href="https://www.kaggle.com/honggquan" target="_blank" rel="noopener" aria-label="Kaggle"><span class="kaggle">k</span></a></li>
+          <li><a href="https://github.com/vohongquann" target="_blank" rel="noopener" aria-label="GitHub"><i
+                class="bx bxl-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vhq-hcmute" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bx bxl-linkedin"></i></a></li>
+          <li><a href="https://www.kaggle.com/honggquan" target="_blank" rel="noopener" aria-label="Kaggle"><span
+                class="kaggle">k</span></a></li>
           <li><a href="mailto:vohongquan.6524@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a></li>
         </ul>
       </div>
@@ -75,8 +86,8 @@
       <figure class="portrait">
         <img src="assets/img/avatar.png" alt="Portrait of Vo Hong Quan" width="408" height="612">
         <figcaption>
-          <span>HCMUTE · Robotics &amp; AI</span>
-          <span>Class of 2026</span>
+          <span>HCMUTE</span>
+          <span>Robotics &amp; AI</span>
         </figcaption>
       </figure>
     </section>
@@ -85,137 +96,239 @@
     <section class="section container" id="work">
       <header class="section__head reveal">
         <p class="eyebrow">Selected work</p>
+        <!-- LIVE DEMO OFF
         <h2>Projects you can run right here</h2>
-        <p class="section__lead">Each demo runs in your browser, built from the code and parameters of the project repository.</p>
+        <p class="section__lead">Each demo runs in your browser, built from the code and parameters of the project
+          repository.</p>
+        -->
+        <h2>Robot control with reinforcement learning</h2>
+        <p class="section__lead">Each project is trained and evaluated in NVIDIA Isaac Lab; the videos are recorded
+          in Isaac Sim.</p>
       </header>
+
+      <!-- Crazyflie -->
+      <article class="showcase reveal">
+        <div class="showcase__info">
+          <p class="meta"><span>01</span> 01/2026 – 09/2026</p>
+          <h3>Crazyflie-IsaacLab: RL-Tuned PID Gains for a Quadrotor</h3>
+          <p>
+            A Crazyflie 2.1 Brushless in Isaac Lab 3.0, flown by a four-layer PID cascade (position, velocity,
+            attitude, rate). At every layer a small PPO network writes the 9 PID gains at every step; it cuts the
+            tracking error of the hand-tuned PID by 23–62 %.
+          </p>
+          <!-- LIVE DEMO OFF
+          <ul class="points">
+            <li>The demo runs the four trained gain networks of the repo (<code>frozen/gains/*.pt</code>) on its mass,
+              inertia, thrust curve and loop rates: 50, 100, 250 and 500 Hz on a 1 kHz physics step.</li>
+            <li>Pick a route, or hit it with a <em>Gust</em>. The panel shows the kp each network writes.</li>
+          </ul>
+          -->
+          <ul class="tags">
+            <li>Isaac Lab</li>
+            <li>PPO</li>
+            <li>rsl_rl</li>
+            <li>PID</li>
+            <li>Python</li>
+          </ul>
+          <div class="links">
+            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/Crazyflie-IsaacLab" target="_blank"
+              rel="noopener"><i class="bx bxl-github"></i> Source code</a>
+          </div>
+        </div>
+
+        <div class="demo" data-demo="crazyflie">
+          <!-- LIVE DEMO OFF
+          <div class="demo__tabs" role="tablist">
+            <button role="tab" aria-selected="true" data-tab="live">Live demo</button>
+            <button role="tab" aria-selected="false" data-tab="video">Isaac Sim video</button>
+          </div>
+          -->
+          <!-- LIVE DEMO OFF
+          <div class="demo__view" data-panel="live">
+            <canvas aria-label="Quadrotor flying a circle and a figure 8 with its gain cascade"></canvas>
+          </div>
+          -->
+          <div class="demo__view" data-panel="video"><!-- LIVE DEMO OFF: was hidden -->
+            <video src="assets/videos/crazyflie-isaaclab.mp4" poster="assets/videos/crazyflie-isaaclab.jpg" controls muted
+              playsinline preload="none"></video>
+          </div>
+          <!-- LIVE DEMO OFF
+          <div class="demo__bar">
+            <button class="chip-btn" data-route="circle" aria-pressed="true"><i class="bx bx-circle"></i> Circle</button>
+            <button class="chip-btn" data-route="eight" aria-pressed="false"><i class="bx bx-infinite"></i>
+              Figure-8</button>
+            <button class="chip-btn" data-route="hover" aria-pressed="false"><i class="bx bx-target-lock"></i>
+              Hover</button>
+            <button class="chip-btn" data-action="gust"><i class="bx bx-wind"></i> Gust</button>
+          </div>
+          -->
+          <!-- LIVE DEMO OFF
+          <p class="demo__note">Rigid-body model with the repo's constants (<code>uav_cfg.py</code>); drone drawn 4× size.</p>
+          -->
+        </div>
+      </article>
+
+      <!-- Balancing robot -->
+      <article class="showcase reveal">
+        <div class="showcase__info">
+          <p class="meta"><span>02</span> 06/2025 – 12/2025</p>
+          <h3>BalancingRobot-IsaacLab: Self-Balancing Robot with an RL Cascade</h3>
+          <p>
+            A Pololu Balboa 32U4 that balances and drives from a raw IMU and its wheel encoders, as the real robot
+            would. A velocity network turns a speed and turn-rate command into wheel torques; a position network on
+            top of it drives to a goal. No falls in 768 randomized episodes; goals reached within 8 mm (median).
+          </p>
+          <!-- LIVE DEMO OFF
+          <ul class="points">
+            <li>The demo runs both frozen networks of the repo (<code>frozen/velocity</code>, <code>frozen/position</code>)
+              with its IMU filter, motor torque-speed limit and URDF masses.</li>
+            <li>Tap the floor to send it to a goal, or <em>Push</em> it. The inset shows it balancing from the side.</li>
+          </ul>
+          -->
+          <ul class="tags">
+            <li>Isaac Lab</li>
+            <li>PPO</li>
+            <li>ROS 2</li>
+            <li>IMU</li>
+            <li>Python</li>
+          </ul>
+          <div class="links">
+            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/BalancingRobot-IsaacLab"
+              target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
+          </div>
+        </div>
+
+        <div class="demo" data-demo="balboa">
+          <!-- LIVE DEMO OFF
+          <div class="demo__tabs" role="tablist">
+            <button role="tab" aria-selected="true" data-tab="live">Live demo</button>
+            <button role="tab" aria-selected="false" data-tab="video">Isaac Sim video</button>
+          </div>
+          -->
+          <!-- LIVE DEMO OFF
+          <div class="demo__view" data-panel="live">
+            <canvas class="clickable" aria-label="Two-wheeled balancing robot driving to goals, seen from above"></canvas>
+          </div>
+          -->
+          <div class="demo__view" data-panel="video"><!-- LIVE DEMO OFF: was hidden -->
+            <video src="assets/videos/balancingrobot-isaaclab.mp4" controls muted playsinline preload="none"></video>
+          </div>
+          <!-- LIVE DEMO OFF
+          <div class="demo__bar">
+            <button class="chip-btn" data-action="goal"><i class="bx bx-map-pin"></i> New goal</button>
+            <button class="chip-btn" data-action="push"><i class="bx bxs-hand"></i> Push</button>
+            <button class="chip-btn" data-action="slow" aria-pressed="false"><i class="bx bx-time-five"></i>
+              Slow-mo</button>
+          </div>
+          -->
+          <!-- LIVE DEMO OFF
+          <p class="demo__note">Equations of motion from the repo's URDF (rolling without slip); 1 grid square = 25 cm.</p>
+          -->
+        </div>
+      </article>
 
       <!-- Rotary pendulum -->
       <article class="showcase reveal">
         <div class="showcase__info">
-          <p class="meta"><span>01</span> 02/2025 – 06/2025</p>
-          <h3>RL Rotary Inverted Pendulum</h3>
+          <p class="meta"><span>03</span> 02/2025 – 05/2025</p>
+          <h3>RotaryPendulum-IsaacLab: Learned Cascade PID</h3>
           <p>
-            Two Soft Actor-Critic agents trained on a Simscape model of the QUBE-Servo 2: one swings the pendulum up
-            in about two seconds, the other keeps it balanced. The final policy runs on an ESP32 in real time.
+            A Quanser QUBE-Servo 2 in Isaac Lab 3.0. A PPO policy writes the six gains of a two-loop PID at 100 Hz;
+            the PID swings the pendulum up, balances it and turns the arm to commanded angles. Swing-up in 0.40 s
+            (median) over 256 simulated robots.
           </p>
+          <!-- LIVE DEMO OFF
           <ul class="points">
-            <li>The demo runs the exported actor networks of both agents (6 → 8 → 8 → 1 and 6 → 32 → 32 → 32 → 1).</li>
-            <li>Press <em>Push</em> to disturb it while it balances. If it falls, it resets and swings up again.</li>
+            <li>The demo runs the shipped policy (<code>pretrained/…/policy.pt</code>) on the repo's motor, encoder
+              and PID model: it swings up in about 0.4 s here too.</li>
+            <li>Press <em>Push</em> to knock the pendulum, <em>Restart</em> to swing up again; drag to turn the 3D
+              view.</li>
           </ul>
-          <ul class="tags"><li>MATLAB</li><li>Simulink</li><li>SAC</li><li>ESP32</li><li>C++</li></ul>
+          -->
+          <ul class="tags">
+            <li>Isaac Lab</li>
+            <li>PPO</li>
+            <li>PID</li>
+            <li>PhysX</li>
+            <li>Python</li>
+          </ul>
           <div class="links">
-            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/rotary-pendulum-matlab" target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
+            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/RotaryPendulum-IsaacLab"
+              target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
           </div>
         </div>
 
-        <div class="demo" data-demo="pendulum">
+        <div class="demo" data-demo="rotary">
+          <!-- LIVE DEMO OFF
           <div class="demo__tabs" role="tablist">
             <button role="tab" aria-selected="true" data-tab="live">Live demo</button>
-            <button role="tab" aria-selected="false" data-tab="video">Hardware video</button>
+            <button role="tab" aria-selected="false" data-tab="video">Isaac Sim video</button>
           </div>
+          -->
+          <!-- LIVE DEMO OFF
           <div class="demo__view" data-panel="live">
-            <canvas aria-label="Simulated rotary inverted pendulum controlled by the trained agents"></canvas>
+            <canvas aria-label="Rotary inverted pendulum swung up and balanced by the trained policy"></canvas>
           </div>
-          <div class="demo__view" data-panel="video" hidden>
-            <video src="assets/videos/rotary-pendulum.mp4" controls muted playsinline preload="metadata"></video>
+          -->
+          <div class="demo__view" data-panel="video"><!-- LIVE DEMO OFF: was hidden -->
+            <video src="assets/videos/rotarypendulum-isaaclab.mp4" poster="assets/videos/rotarypendulum-isaaclab.jpg"
+              controls muted playsinline preload="none"></video>
           </div>
+          <!-- LIVE DEMO OFF
           <div class="demo__bar">
-            <button class="chip-btn" data-action="push"><i class="bx bx-hand"></i> Push</button>
+            <button class="chip-btn" data-action="push"><i class="bx bxs-hand"></i> Push</button>
             <button class="chip-btn" data-action="restart"><i class="bx bx-reset"></i> Restart</button>
-            <button class="chip-btn" data-action="slow" aria-pressed="false"><i class="bx bx-time-five"></i> Slow-mo</button>
+            <button class="chip-btn" data-action="slow" aria-pressed="false"><i class="bx bx-time-five"></i>
+              Slow-mo</button>
           </div>
-          <p class="demo__note">Plant model rebuilt from the repo's motor and CAD parameters; actor weights from <code>get_action_su.m</code> / <code>get_action_b.m</code>.</p>
-        </div>
-      </article>
-
-      <!-- Drone -->
-      <article class="showcase reveal">
-        <div class="showcase__info">
-          <p class="meta"><span>02</span> 2025 – Present</p>
-          <h3>Drone RL: Crazyflie in Isaac Lab</h3>
-          <p>
-            Flight control for the Crazyflie 2.1 Brushless in Isaac Lab 3.0: a cascaded PID baseline and the same four
-            layers learned with PPO, small enough for the on-board STM32, plus landing on an ArUco marker.
-          </p>
-          <ul class="points">
-            <li>The demo flies a side-view model with the repo's tuned PID gains: position → velocity → attitude → rate.</li>
-            <li>Tap anywhere to set a target, or pick a route. <em>Gust</em> hits it with a sideways push.</li>
-          </ul>
-          <ul class="tags"><li>Isaac Lab</li><li>PPO</li><li>rsl_rl</li><li>PID</li><li>Python</li></ul>
-          <div class="links">
-            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/Drone_RL" target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
-          </div>
-        </div>
-
-        <div class="demo" data-demo="drone">
-          <div class="demo__view">
-            <canvas class="clickable" aria-label="Side view of a quadrotor following targets with a cascaded PID controller"></canvas>
-          </div>
-          <div class="demo__bar">
-            <button class="chip-btn" data-route="square" aria-pressed="true"><i class="bx bx-square"></i> Square</button>
-            <button class="chip-btn" data-route="eight" aria-pressed="false"><i class="bx bx-infinite"></i> Figure-8</button>
-            <button class="chip-btn" data-action="gust"><i class="bx bx-wind"></i> Gust</button>
-          </div>
-          <p class="demo__note">2-D simplification (34 g, 0.2 N per motor, 30 ms motor lag); drone drawn 2.5× size.</p>
-        </div>
-      </article>
-
-      <!-- NeuroKit -->
-      <article class="showcase reveal">
-        <div class="showcase__info">
-          <p class="meta"><span>03</span> 09/2024 – 10/2024</p>
-          <h3>NeuroKit: Deep Learning from Scratch</h3>
-          <p>
-            A PyTorch-like framework written with NumPy only: tensors with autograd, layers, losses, and SGD / Adam /
-            RMSprop optimizers, plus synthetic datasets to test them.
-          </p>
-          <ul class="points">
-            <li>The demo is a JavaScript port of the same building blocks, training live on NeuroKit's own datasets.</li>
-            <li>Change the dataset, activation or optimizer and watch the decision boundary form.</li>
-          </ul>
-          <ul class="tags"><li>NumPy</li><li>Autograd</li><li>Python</li></ul>
-          <div class="links">
-            <a class="btn btn--outline btn--sm" href="https://github.com/vohongquann/NeuroKit" target="_blank" rel="noopener"><i class="bx bxl-github"></i> Source code</a>
-          </div>
-        </div>
-
-        <div class="demo" data-demo="neurokit">
-          <div class="demo__view">
-            <canvas aria-label="Neural network decision boundary training live"></canvas>
-          </div>
-          <div class="demo__bar">
-            <label class="select"><span>Data</span>
-              <select data-opt="dataset"><option>Spiral</option><option>Circle</option><option>Zone</option></select>
-            </label>
-            <label class="select"><span>Act</span>
-              <select data-opt="activation"><option>ReLU</option><option>Tanh</option></select>
-            </label>
-            <label class="select"><span>Optim</span>
-              <select data-opt="optimizer"><option>Adam</option><option>SGD</option><option>RMSprop</option></select>
-            </label>
-            <button class="chip-btn" data-action="play" aria-pressed="false"><i class="bx bx-pause"></i> Pause</button>
-            <button class="chip-btn" data-action="reset"><i class="bx bx-reset"></i> Reset</button>
-          </div>
-          <p class="demo__note">MLP 2 → 24 → 24 → 3, full-batch training on 200–300 points.</p>
+          -->
+          <!-- LIVE DEMO OFF
+          <p class="demo__note">Equations of motion from the repo's URDF; motor and encoders from <code>mdp/motor.py</code>,
+            <code>mdp/sensors.py</code>.</p>
+          -->
         </div>
       </article>
 
       <!-- Other projects -->
       <h3 class="subhead reveal">More projects</h3>
       <div class="cards">
-        <a class="card reveal" href="https://github.com/vohongquann/agri-crop-classification" target="_blank" rel="noopener">
+        <a class="card reveal" href="https://github.com/vohongquann/NeuroKit" target="_blank" rel="noopener">
+          <div class="card__top"><i class="bx bx-brain"></i><i class="bx bx-link-external"></i></div>
+          <h4>NeuroKit <span class="muted">09/2024 – 10/2024</span></h4>
+          <p>A PyTorch-like deep learning framework written with NumPy only: autograd tensors, layers, losses and SGD /
+            Adam / RMSprop optimizers.</p>
+          <ul class="tags">
+            <li>NumPy</li>
+            <li>Autograd</li>
+            <li>Python</li>
+          </ul>
+        </a>
+        <a class="card reveal" href="https://github.com/vohongquann/agri-crop-classification" target="_blank"
+          rel="noopener">
           <div class="card__top"><i class="bx bx-leaf"></i><i class="bx bx-link-external"></i></div>
           <h4>Agricultural Crop Classification</h4>
-          <p>Image classification pipeline: EDA, stratified splits, augmentation, VGG16 training and per-class evaluation.</p>
-          <ul class="tags"><li>PyTorch</li><li>CNN</li><li>VGG16</li></ul>
+          <p>Image classification pipeline: EDA, stratified splits, augmentation, VGG16 training and per-class
+            evaluation.</p>
+          <ul class="tags">
+            <li>PyTorch</li>
+            <li>CNN</li>
+            <li>VGG16</li>
+          </ul>
         </a>
-        <a class="card reveal" href="https://github.com/vohongquann/regression_comparison" target="_blank" rel="noopener">
+        <a class="card reveal" href="https://github.com/vohongquann/regression_comparison" target="_blank"
+          rel="noopener">
           <div class="card__top"><i class="bx bx-line-chart"></i><i class="bx bx-link-external"></i></div>
           <h4>Regression Models Comparison</h4>
-          <p>Linear, Ridge, Lasso and ElasticNet, closed-form vs. gradient descent, on Kaggle House Prices (best RMSE 0.134).</p>
-          <ul class="tags"><li>scikit-learn</li><li>Keras</li><li>Kaggle</li></ul>
+          <p>Linear, Ridge, Lasso and ElasticNet, closed-form vs. gradient descent, on Kaggle House Prices (best RMSE
+            0.134).</p>
+          <ul class="tags">
+            <li>scikit-learn</li>
+            <li>Keras</li>
+            <li>Kaggle</li>
+          </ul>
         </a>
-        <a class="card card--ghost reveal" href="https://github.com/vohongquann?tab=repositories" target="_blank" rel="noopener">
+        <a class="card card--ghost reveal" href="https://github.com/vohongquann?tab=repositories" target="_blank"
+          rel="noopener">
           <div class="card__top"><i class="bx bxl-github"></i><i class="bx bx-right-arrow-alt"></i></div>
           <h4>All repositories</h4>
           <p>Everything else I'm building, on GitHub.</p>
@@ -243,12 +356,14 @@
           </div>
         </article>
         <article class="timeline__item reveal">
-          <p class="meta">08/2022 – 08/2026</p>
+          <p class="meta">08/2022 – 12/2026 (expected)</p>
           <div>
             <h3>B.Eng. Robotics &amp; Artificial Intelligence</h3>
-            <p class="timeline__org">HCMC University of Technology and Education</p>
+            <p class="timeline__org">Ho Chi Minh City University of Technology and Engineering</p>
             <ul class="points">
-              <li>Coursework: Machine Vision, Artificial Intelligence, Artificial Neural Networks.</li>
+              <li>GPA 3.22 / 4.0.</li>
+              <li>Coursework: Machine Vision, Artificial Intelligence, Artificial Neural Networks, Practice of
+                Artificial Intelligence.</li>
               <li>TOEIC 715 / 990, IIG Vietnam (2025).</li>
             </ul>
           </div>
@@ -264,11 +379,61 @@
       </header>
 
       <dl class="skills reveal">
-        <div><dt>Languages</dt><dd><ul class="tags"><li>Python</li><li>C / C++</li><li>MATLAB</li></ul></dd></div>
-        <div><dt>Machine learning</dt><dd><ul class="tags"><li>Reinforcement learning</li><li>Deep learning</li><li>Supervised</li><li>Unsupervised</li></ul></dd></div>
-        <div><dt>Frameworks</dt><dd><ul class="tags"><li>PyTorch</li><li>TensorFlow / Keras</li><li>scikit-learn</li><li>OpenCV</li><li>YOLO</li></ul></dd></div>
-        <div><dt>Robotics &amp; sim</dt><dd><ul class="tags"><li>Isaac Lab / Isaac Sim</li><li>Simulink / Simscape</li><li>ESP32</li><li>STM32</li></ul></dd></div>
-        <div><dt>Tools</dt><dd><ul class="tags"><li>Git</li><li>Linux</li><li>Anaconda</li><li>Jupyter / Colab</li></ul></dd></div>
+        <div>
+          <dt>Languages</dt>
+          <dd>
+            <ul class="tags">
+              <li>Python</li>
+              <li>C / C++</li>
+              <li>MATLAB</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Machine learning</dt>
+          <dd>
+            <ul class="tags">
+              <li>Reinforcement learning</li>
+              <li>Deep learning</li>
+              <li>Supervised</li>
+              <li>Unsupervised</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Frameworks</dt>
+          <dd>
+            <ul class="tags">
+              <li>PyTorch</li>
+              <li>TensorFlow / Keras</li>
+              <li>scikit-learn</li>
+              <li>OpenCV</li>
+              <li>YOLO</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Robotics &amp; sim</dt>
+          <dd>
+            <ul class="tags">
+              <li>Isaac Lab / Isaac Sim</li>
+              <li>Simulink / Simscape</li>
+              <li>ESP32</li>
+              <li>STM32</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Tools</dt>
+          <dd>
+            <ul class="tags">
+              <li>Git</li>
+              <li>Linux</li>
+              <li>Anaconda</li>
+              <li>Jupyter / Colab</li>
+            </ul>
+          </dd>
+        </div>
       </dl>
     </section>
 
@@ -277,10 +442,12 @@
       <div class="contact reveal">
         <p class="eyebrow">Contact</p>
         <h2>Let's build something that moves.</h2>
-        <p>I'm looking for AI and robotics engineering roles. The fastest way to reach me is email.</p>
+        <p>I'm looking for an AI or robotics engineering internship. The fastest way to reach me is email.</p>
         <div class="contact__actions">
-          <a href="mailto:vohongquan.6524@gmail.com" class="btn btn--solid"><i class="bx bx-envelope"></i> vohongquan.6524@gmail.com</a>
-          <button class="btn btn--outline" id="copy-email" data-email="vohongquan.6524@gmail.com"><i class="bx bx-copy"></i> <span>Copy</span></button>
+          <a href="mailto:vohongquan.6524@gmail.com" class="btn btn--solid"><i class="bx bx-envelope"></i>
+            vohongquan.6524@gmail.com</a>
+          <button class="btn btn--outline" id="copy-email" data-email="vohongquan.6524@gmail.com"><i
+              class="bx bx-copy"></i> <span>Copy</span></button>
         </div>
         <ul class="contact__info">
           <li><i class="bx bx-phone"></i> +84 363 645 485</li>
@@ -295,12 +462,26 @@
     <a href="#top">Back to top <i class="bx bx-up-arrow-alt"></i></a>
   </footer>
 
+  <!-- LIVE DEMO OFF
   <script src="js/demos/stage.js" defer></script>
-  <script src="assets/data/pendulum-policy.js" defer></script>
-  <script src="js/demos/pendulum-model.js" defer></script>
-  <script src="js/demos/pendulum.js" defer></script>
-  <script src="js/demos/drone.js" defer></script>
-  <script src="js/demos/neurokit.js" defer></script>
+  <script src="js/demos/policy.js" defer></script>
+  <script src="assets/data/crazyflie-gain-policies.js" defer></script>
+  <script src="assets/data/balboa-velocity-policy.js" defer></script>
+  <script src="assets/data/balboa-position-policy.js" defer></script>
+  <script src="assets/data/rotary-policy.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    integrity="sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu" crossorigin="anonymous"
+    defer></script>
+  <script src="js/demos/view3d.js" defer></script>
+  <script src="js/demos/pendulum-3d.js" defer></script>
+  <script src="js/demos/crazyflie-model.js" defer></script>
+  <script src="js/demos/crazyflie.js" defer></script>
+  <script src="js/demos/balboa-model.js" defer></script>
+  <script src="js/demos/balboa.js" defer></script>
+  <script src="js/demos/rotary-model.js" defer></script>
+  <script src="js/demos/rotary.js" defer></script>
+  -->
   <script src="js/main.js" defer></script>
 </body>
+
 </html>

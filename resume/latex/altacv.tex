@@ -1,0 +1,53 @@
+%-------------------------------------------------------------------------
+% Two-column AltaCV layout (altacv.cls by LianTze Lim, LPPL): main column on
+% the left, skills and certifications in the right sidebar. A designed layout
+% for sharing as a PDF; not ATS-friendly (columns, icons), so it has no photo
+% and keeps everything as selectable text.
+%-------------------------------------------------------------------------
+\documentclass[10pt,letterpaper,ragged2e]{altacv}
+
+\geometry{left=1.5cm,right=6.9cm,marginparwidth=5.2cm,marginparsep=0.8cm,top=0.7cm,bottom=0.7cm}
+
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{Accent}{HTML}{1F5FA8}
+\definecolor{Ink}{HTML}{1B1F24}
+\colorlet{heading}{Accent}
+\colorlet{accent}{Accent}
+\colorlet{emphasis}{Ink}
+\colorlet{body}{Ink}
+\renewcommand{\itemmarker}{{\small\textbullet}}
+
+\newenvironment{cvbullets}{\begin{itemize}[itemsep=1pt,topsep=2pt,parsep=0pt]\small}{\end{itemize}}
+\newcommand{\EduItem}[6]{\cvevent{#3}{#1}{#4}{#2}\par\small #6\par Relevant coursework: #5\par\normalsize\medskip}
+\newcommand{\ExpEntry}[5]{\cvevent{#3}{#1}{#4}{#2}#5}
+\newcommand{\ProjEntry}[5]{\cvproject{#1}\par{\small\itshape #2\par}{\small #3 \quad \faCalendar\hspace{0.4em}#4\par}\smallskip #5\medskip}
+\newcommand{\SkillItem}[2]{{\small\textbf{\color{emphasis}#1}\par #2\par}\smallskip}
+\newcommand{\CertItem}[2]{{\small #1 \par \faCalendar\hspace{0.4em}#2\par}}
+
+\input{content}
+
+\begin{document}
+\name{\cvName}
+\tagline{}
+\personalinfo{%
+  \email{\cvEmail}
+  \phone{\cvPhone}
+  \location{\cvLocation}\\
+  \github{\cvGithub}
+  \linkedin{\cvLinkedin}
+}
+\begin{fullwidth}\makecvheader\end{fullwidth}
+
+\AtBeginEnvironment{itemize}{\small}
+
+\cvsection[altacv-sidebar]{Education}
+\cvEducation
+\cvsection{Experience}
+\cvExperience
+\cvsection{Projects}
+\cvProjects
+
+\end{document}
